@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- اسم الموقع في التاب زي الصورة -->
+<title>AlEman Car's Accessories | Blue</title>
+<link rel="icon" href="https://bluetags.online/uploads/vcards/profiles/69065/640390665_122107412487244412_6657412081809773699_n.jpg">
+<link rel="apple-touch-icon" href="https://bluetags.online/uploads/vcards/profiles/69065/640390665_122107412487244412_6657412081809773699_n.jpg">
+<meta name="description" content="الإيمان لكماليات السيارات - بورفؤاد | AlEman Car Accessories">
+<meta property="og:site_name" content="AlEman Car's Accessories | Blue">
+<meta property="og:title" content="AlEman Car's Accessories | Blue">
+<meta property="og:image" content="https://bluetags.online/uploads/vcards/profiles/69065/640390665_122107412487244412_6657412081809773699_n.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- ===================== CSS ===================== -->
+<style>
+  :root {
+    --bg:#ffffff; --card:rgba(255,255,255,.92); --ink:#14213d; --muted:#5b6b85; --line:#dde5f0;
+    --blue:#1f5fbf; --amber:#f2a900; --green:#1a9a5b; --red:#d6453d; --chip:#eaf1fb;
+  }
+  :root[data-theme="dark"] {
+    --bg:#0f1624; --card:rgba(24,34,58,.78); --ink:#eef3fb; --muted:#9fb0cc; --line:#2a3858; --chip:#22304d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Cairo",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding-bottom:90px;transition:background .2s}
+  a{color:inherit;text-decoration:none}
+  button,input,select,textarea{font:inherit;color:inherit}
+  .wrap{max-width:480px;margin:0 auto;position:relative}
+
+  /* شريط الأدوات */
+  .tools{position:absolute;top:12px;inset-inline:12px;display:flex;justify-content:space-between;z-index:2}
+  .tbtn{background:rgba(255,255,255,.92);color:#14213d;border:0;border-radius:99px;padding:6px 14px;font-weight:600;font-size:.85rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+
+  /* تحسين الغلاف */
+  .cover{position:relative;overflow:hidden;height:240px;background:#1a1a1a center/contain no-repeat;border-radius:0 0 28px 28px;animation:kb 16s ease-in-out infinite alternate}
+  .cover::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite}
+  @keyframes kb{from{background-size:100%;background-position:30% 50%}to{background-size:110%;background-position:70% 50%}}
+  @keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+
+  .profile{text-align:center;margin-top:-40px;padding:0 20px;position:relative;z-index:3}
+  .av{width:120px;height:120px;margin:0 auto;border-radius:50%;overflow:hidden;background:#fff;border:5px solid #fff;box-shadow:0 0 0 0 rgba(31,95,191,.5);animation:ring 2.6s infinite}
+  .avatar{display:block;width:100%;height:100%;object-fit:cover}
+  @keyframes ring{70%{box-shadow:0 0 0 18px rgba(31,95,191,0)}100%{box-shadow:0 0 0 0 rgba(31,95,191,0)}}
+  
+  .splash{position:fixed;inset:0;z-index:20;background:var(--bg);display:grid;place-content:center;justify-items:center;gap:14px;transition:opacity .6s,visibility .6s}
+  .splash.hide{opacity:0;visibility:hidden}
+  .splash p{font-weight:800;font-size:1.4rem}
+  h1{font-size:1.6rem;font-weight:800;margin-top:15px}
+  .sub{color:var(--muted);font-size:.95rem}
+  .status{display:inline-block;margin-top:10px;padding:2px 14px;border-radius:99px;font-size:.85rem;font-weight:600;background:#e6f6ee;color:var(--green)}
+  .status.closed{background:#fdeceb;color:var(--red)}
+
+  /* أزرار رئيسية */
+  .actions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 16px 0}
+  .actions button,.actions a{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 4px;text-align:center;font-weight:600;font-size:.82rem;cursor:pointer;display:block}
+  .actions .big{font-size:1.25rem;display:block;line-height:1.2}
+  .actions button:hover,.actions a:hover{border-color:var(--blue)}
+
+  section{margin:24px 16px 0}
+  h2{font-size:1.05rem;font-weight:800;margin-bottom:10px;padding-inline-start:10px;border-inline-start:4px solid var(--amber)}
+
+  /* الروابط */
+  .links{display:grid;gap:10px}
+  .row{display:flex;gap:8px;align-items:stretch}
+  .link{flex:1;display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .15s,transform .15s}
+  .link:hover{border-color:var(--blue);transform:translateY(-2px)}
+  .ico{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff}
+  .ico svg{width:24px;height:24px;fill:currentColor}
+  .ico img{width:28px;height:28px;object-fit:contain}
+  .link b{display:block}
+  .link small{color:var(--muted);direction:ltr;unicode-bidi:plaintext}
+  .copy{flex:none;width:52px;background:var(--card);border:1px solid var(--line);border-radius:14px;cursor:pointer;font-size:.78rem;font-weight:600}
+  .copy:hover{border-color:var(--blue)}
+
+  /* الخدمات */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:.9rem;cursor:pointer}
+  .chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  /* نموذج الطلب */
+  .form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px}
+  .form label{font-size:.85rem;color:var(--muted)}
+  .form input,.form select,.form textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+  .form textarea{min-height:76px;resize:vertical}
+  .send{background:#25d366;color:#fff;border:0;border-radius:12px;padding:11px;font-weight:800;cursor:pointer}
+
+  /* المواعيد */
+  .hours{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 16px}
+  .hours div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+  .hours div:last-child{border-bottom:0}
+  .hours .today{color:var(--blue);font-weight:800}
+  .hours span:last-child{direction:ltr}
+  .address{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:10px}
+
+  footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:26px}
+
+  /* شريط التنقل */
+  html{scroll-behavior:smooth}
+  section{scroll-margin-top:64px}
+  .nav{position:sticky;top:10px;z-index:4;margin:14px 12px 0;display:flex;gap:8px;overflow-x:auto;padding:8px 10px;background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:99px;box-shadow:0 6px 20px rgba(20,33,61,.12);scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{flex:none;padding:6px 14px;border-radius:99px;font-size:.88rem;font-weight:600;background:var(--chip);border:1px solid var(--line)}
+  .nav a.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  /* أسئلة شائعة */
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+  .faq summary{cursor:pointer;font-weight:600}
+  .faq p{margin-top:8px;color:var(--muted);font-size:.92rem}
+
+  /* إعلان المطوّر */
+  .ad{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px}
+  .ad img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+  .ad .tx{flex:1;min-width:0}
+  .ad h3{font-size:.88rem;line-height:1.4}
+  .ad p{color:var(--muted);font-size:.75rem;margin:0}
+  .ad .btns{display:flex;gap:6px;flex:none}
+  .ad .btns a{padding:6px 12px;border-radius:99px;font-weight:700;font-size:.78rem;background:var(--blue);color:#fff}
+  .ad .btns a.wa{background:#25d366}
+  @media(max-width:400px){.ad{flex-wrap:wrap}.ad .btns{width:100%;justify-content:flex-end}}
+  
+  /* زرار الرجوع لأعلى */
+  .top{position:fixed;bottom:18px;inset-inline-start:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:1.1rem;display:none;z-index:5;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+  .top.show{display:grid;place-items:center}
+
+  /* زر واتساب العائم + التنبيه */
+  .fab{position:fixed;bottom:18px;inset-inline-end:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.28);z-index:5}
+  .fab svg{width:32px;height:32px;fill:#fff}
+  .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#14213d;color:#fff;padding:8px 18px;border-radius:99px;font-size:.88rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:6}
+  .toast.show{opacity:1}
+
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+  /* ===== روابط حديثة + أيقونات متحركة ===== */
+  .links{gap:12px}
+  .links>*{animation:up .6s cubic-bezier(.2,.9,.3,1) both}
+  .links>*:nth-child(2){animation-delay:.08s}.links>*:nth-child(3){animation-delay:.16s}.links>*:nth-child(4){animation-delay:.24s}
+  @keyframes up{from{opacity:0;transform:translateY(18px)}}
+  .link{--c:var(--blue);position:relative;overflow:hidden;gap:14px;padding:12px 14px;border-radius:20px;
+    background:linear-gradient(135deg,var(--card),color-mix(in srgb,var(--c) 9%,transparent));
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);
+    box-shadow:0 8px 22px rgba(20,33,61,.08);transition:transform .3s cubic-bezier(.2,.9,.3,1),box-shadow .3s,border-color .3s}
+  .link::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.4) 50%,transparent 65%);transform:translateX(-130%);transition:transform .8s}
+  .link:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 30px color-mix(in srgb,var(--c) 30%,transparent)}
+  .link:hover::after{transform:translateX(130%)}
+  .link:active{transform:scale(.98)}
+  .link .tx{flex:1;min-width:0}
+  .link b{font-weight:800}
+  .go{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--chip);color:var(--muted);transition:background .3s,color .3s,transform .3s}
+  .go svg{width:16px;height:16px}
+  [dir="rtl"] .go svg{transform:scaleX(-1)}
+  .link:hover .go{background:var(--c);color:#fff;transform:translateX(4px)}
+  [dir="rtl"] .link:hover .go{transform:translateX(-4px)}
+  .copy{border-radius:20px;transition:transform .2s,border-color .2s,background .2s}
+  .copy:hover{transform:translateY(-3px);background:var(--chip)}
+
+  .ico{position:relative;width:48px;height:48px;border-radius:15px;color:#fff;
+    box-shadow:0 8px 16px color-mix(in srgb,var(--c,#1f5fbf) 35%,transparent),inset 0 1px 0 rgba(255,255,255,.4)}
+  .link .ico::before{content:"";position:absolute;inset:0;border-radius:inherit;animation:ripple 2.8s ease-out infinite}
+  @keyframes ripple{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--c) 55%,transparent)}70%,100%{box-shadow:0 0 0 14px transparent}}
+  .ico svg{position:relative;z-index:1;width:26px;height:26px;fill:currentColor}
+  .ico.plain{background:#fff;border:1px solid var(--line)}
+  .ico.plain img{width:30px;height:30px}
+  .ico.ph{background:linear-gradient(135deg,#3b8cf0,#1f5fbf)}
+  .ico.wa{background:#25d366}
+  .ico.pin{background:linear-gradient(135deg,#ff7a6e,#d6453d)}
+  .ico.sh{background:linear-gradient(135deg,#9b6cff,#6d28d9)}
+  .ico.fb{background:linear-gradient(135deg,#3d9bff,#1877f2 55%,#0c5ed6)}
+  .ico.tt{background:#0d0d0f}
+  .ico.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888,#f09433);background-size:300% 300%;animation:igflow 6s ease infinite}
+  @keyframes igflow{50%{background-position:100% 100%}}
+
+  .ico.ph svg{animation:shake 3s infinite;transform-origin:50% 50%}
+  @keyframes shake{0%,55%,100%{transform:rotate(0)}60%,70%,80%{transform:rotate(-16deg)}65%,75%,85%{transform:rotate(16deg)}}
+  .ico.wa svg{animation:beat 2s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+  .ico.pin svg{animation:drop 2.4s ease-in-out infinite}
+  @keyframes drop{0%,100%{transform:translateY(0)}35%{transform:translateY(-6px)}55%{transform:translateY(0)}70%{transform:translateY(-2px)}}
+  .ico.sh svg{animation:swing 3s ease-in-out infinite}
+  @keyframes swing{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg) scale(1.08)}}
+  .ico.fb svg{animation:thumb 2.8s ease-in-out infinite}
+  @keyframes thumb{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-8deg)}}
+  .ico.ig svg{animation:pop 3s ease-in-out infinite}
+  @keyframes pop{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.15) rotate(-8deg)}}
+  .ico.tt svg{animation:glitch 2.6s infinite steps(1)}
+  @keyframes glitch{
+    0%,88%,100%{filter:drop-shadow(1.5px 0 0 #25f4ee) drop-shadow(-1.5px 0 0 #fe2c55);transform:none}
+    90%{filter:drop-shadow(-3px 1px 0 #25f4ee) drop-shadow(3px -1px 0 #fe2c55);transform:translate(1px,-1px)}
+    94%{filter:drop-shadow(3px -1px 0 #25f4ee) drop-shadow(-3px 1px 0 #fe2c55);transform:translate(-1px,1px)}}
+  .link:hover .ico svg{animation-duration:.8s}
+
+  /* أزرار الصف الرئيسي */
+  .actions{gap:10px}
+  .actions button,.actions a{border-radius:20px;padding:14px 4px 10px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 6px 16px rgba(20,33,61,.07)}
+  .actions button:hover,.actions a:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(20,33,61,.15)}
+  .actions .ico{display:grid;width:44px;height:44px;margin:0 auto 6px;font-size:0}
+  .actions .ico svg{width:23px;height:23px}
+  .send{border-radius:16px;transition:transform .2s,box-shadow .2s}
+  .send:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(31,95,191,.3)}
+
+  /* زر واتساب العائم */
+  .fab::before{content:"";position:absolute;inset:0;border-radius:50%;animation:fabring 2.4s ease-out infinite}
+  @keyframes fabring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+  .fab svg{position:relative;animation:beat 2s ease-in-out infinite}
+
+  @media (prefers-reduced-motion:reduce){.ico,.ico svg,.link .ico::before,.links>*,.fab::before,.fab svg{animation:none!important}}
+</style>
+</head>
+
+<!-- ===================== HTML ===================== -->
+<body>
+<div class="splash" id="splash"><div class="av"><img class="avatar" id="spImg" alt=""></div><p data-t="welcome"></p></div>
+<div class="bg"><b></b><b></b><b></b><b></b><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+
+  <div class="tools">
+    <button class="tbtn" id="langBtn" type="button"></button>
+    <button class="tbtn" id="themeBtn" type="button"></button>
+  </div>
+
+  <div class="cover" id="cover"></div>
+
+  <header class="profile">
+    <div class="av"><img class="avatar" id="avatar" alt=""></div>
+    <h1 id="name"></h1>
+    <p class="sub" id="tagline"></p>
+    <span class="status" id="status"></span>
+  </header>
+
+  <nav class="nav" id="nav"></nav>
+
+  <div class="actions">
+    <a id="aCall" href="#"><span class="big ico ph" data-ic="phone"></span><span data-t="call"></span></a>
+    <a id="aWa" href="#" target="_blank" rel="noopener noreferrer"><span class="big ico wa" data-ic="wa"></span><span data-t="whatsapp"></span></a>
+    <a id="aMap" href="#" target="_blank" rel="noopener noreferrer"><span class="big ico pin" data-ic="pin"></span><span data-t="location"></span></a>
+    <button id="aShare" type="button"><span class="big ico sh" data-ic="share"></span><span data-t="share"></span></button>
+  </div>
+
+  <section>
+    <button class="send" id="saveContact" type="button" style="width:100%;background:var(--blue)" data-t="saveContact"></button>
+  </section>
+
+  <section id="s-contact">
+    <h2 data-t="contact"></h2>
+    <div class="links" id="contactLinks"></div>
+  </section>
+
+  <section id="s-follow">
+    <h2 data-t="follow"></h2>
+    <div class="links" id="socialLinks"></div>
+  </section>
+
+  <section id="s-pay">
+    <h2 data-t="pay"></h2>
+    <div class="links" id="payLinks"></div>
+  </section>
+
+  <section id="s-services">
+    <h2 data-t="services"></h2>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <section id="s-order">
+    <h2 data-t="order"></h2>
+    <div class="form">
+      <div><label for="fName" data-t="yourName"></label><input id="fName" type="text" autocomplete="name"></div>
+      <div><label for="fItem" data-t="item"></label><select id="fItem"></select></div>
+      <div><label for="fMsg" data-t="details"></label><textarea id="fMsg"></textarea></div>
+      <button class="send" id="sendOrder" type="button" data-t="sendOrder"></button>
+    </div>
+  </section>
+
+  <section id="s-faq">
+    <h2 data-t="faq"></h2>
+    <div class="faq" id="faq"></div>
+  </section>
+
+  <section id="s-hours">
+    <h2 data-t="hours"></h2>
+    <div class="hours" id="hours"></div>
+    <div class="address" id="address"></div>
+  </section>
+
+  <section>
+    <div class="ad" id="ad"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"></a>
+<div class="toast" id="toast" role="status"></div>
+<button class="top" id="top" type="button" aria-label="Top">⬆️</button>
+
+<!-- ===================== JavaScript ===================== -->
+<script>
+  /* ============ البيانات: عدّل من هنا بس ============ */
+  const DATA = {
+    cover:  "https://bluetags.online/uploads/vcards/covers/69066/640381346_122107412649244412_6419477001138704648_n.jpg",
+    avatar: "https://bluetags.online/uploads/vcards/profiles/69065/640390665_122107412487244412_6657412081809773699_n.jpg",
+    phones: [
+      { number: "01202665525", intl: "201202665525" },
+      { number: "01027058555", intl: "201027058555" }
+    ],
+    map:       "https://maps.app.goo.gl/nJWR7oPRDjygPcZp8",
+    facebook:  "https://www.facebook.com/aleman.car.accessories",
+    instagram: "https://www.instagram.com/alemancaraccessories/",
+    tiktok:    "https://www.tiktok.com/@aleman.car.access",
+    vodafone:  { url: "http://vf.eg/vfcash?id=mt&qrId=hKmJBe", icon: "https://bluetags.online/uploads/icon/69067/5179548-middle.png" },
+    instapay:  { url: "https://ipn.eg/S/ntlxb201202665525/instapay/1QTjNO", icon: "https://bluetags.online/uploads/icon/69068/InstaPay_Logo.png" },
+    /* 0 = الأحد ... 6 = السبت | بنظام 24 ساعة */
+    hours: [[9,21],[9,21],[9,21],[9,21],[9,21],[9,21],[9,21]],
+    /* الخدمات: عدّلها حسب منتجاتك */
+    services: {
+      ar: ["إكسسوارات داخلية", "إكسسوارات خارجية", "إضاءة", "أغطية مقاعد", "شاشات وصوتيات", "عناية بالسيارة"],
+      en: ["Interior accessories", "Exterior accessories", "Lighting", "Seat covers", "Screens & audio", "Car care"]
+    }
+  };
+
+  /* ============ النصوص بالعربي والإنجليزي ============ */
+  const T = {
+    ar: { name:"الإيمان لكماليات السيارات", tagline:"AlEman Car's Accessories", call:"اتصل", whatsapp:"واتساب", location:"الموقع", share:"مشاركة",
+      saveContact:"احفظ الرقم في جهات الاتصال", contact:"تواصل معنا", follow:"تابعنا", pay:"الدفع", services:"خدماتنا", order:"اطلب من واتساب",
+      yourName:"اسمك", item:"النوع", details:"التفاصيل (موديل السيارة، المطلوب...)", sendOrder:"أرسل الطلب على واتساب", hours:"مواعيد العمل",
+      address:"بورفؤاد – الحزب الوطني – عمارة 68 محل 1", open:"مفتوح الآن", closed:"مغلق الآن", first:"الرقم الأول", second:"الرقم الثاني",
+      copy:"نسخ", copied:"تم النسخ", mapTitle:"الموقع على الخريطة", mapSub:"افتح في خرائط جوجل", payHint:"ادفع بسهولة",
+      lang:"English", dark:"داكن", light:"فاتح", linkCopied:"تم نسخ الرابط", saved:"تم تحميل ملف جهة الاتصال",
+      days:["الأحد","الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"], am:"ص", pm:"م",
+      msgHello:"السلام عليكم، أنا", msgItem:"عايز أسأل عن", msgDetails:"التفاصيل",
+      faq:"أسئلة شائعة", welcome:"أهلاً بيك",
+      faqs:[["فين العنوان؟","{a}"],["مواعيد العمل إيه؟","كل يوم من {h}."],["أطلب إزاي؟","اختار النوع واكتب التفاصيل في قسم «اطلب من واتساب» وهيتفتح واتساب برسالة جاهزة."],["أدفع إزاي؟","من قسم الدفع: فودافون كاش أو إنستا باي."]],
+      adTitle:"عايز كارت أو موقع زي ده لشغلك؟", adText:"تصميم وتطوير مواقع وكروت إلكترونية — أنس", adMsg:"السلام عليكم، عايز أعمل كارت إلكتروني لشغلي."
+    },
+    en: { name:"AlEman Car Accessories", tagline:"الإيمان لكماليات السيارات", call:"Call", whatsapp:"WhatsApp", location:"Location", share:"Share",
+      saveContact:"Save to contacts", contact:"Contact us", follow:"Follow us", pay:"Payment", services:"Our products", order:"Order via WhatsApp",
+      yourName:"Your name", item:"Category", details:"Details (car model, what you need...)", sendOrder:"Send order on WhatsApp", hours:"Business hours",
+      address:"Port Fouad – Al-Hizb Al-Watani – Building 68, Shop 1", open:"Open now", closed:"Closed now", first:"Phone 1", second:"Phone 2",
+      copy:"Copy", copied:"Copied", mapTitle:"Location on map", mapSub:"Open in Google Maps", payHint:"Pay easily",
+      lang:"العربية", dark:"Dark", light:"Light", linkCopied:"Link copied", saved:"Contact file downloaded",
+      days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], am:"AM", pm:"PM",
+      msgHello:"Hello, I'm", msgItem:"I'd like to ask about", msgDetails:"Details",
+      faq:"FAQ", welcome:"Welcome",
+      faqs:[["Where are you?","{a}"],["What are your hours?","Every day, {h}."],["How do I order?","Pick a category and add details in “Order via WhatsApp”; WhatsApp opens with a ready message."],["How do I pay?","See the Payment section: Vodafone Cash or InstaPay."]],
+      adTitle:"Want a digital card or website like this?", adText:"Web design & digital business cards — Anas", adMsg:"Hello, I'd like a digital business card for my business."
+    }
+  };
+
+  /* ============ أيقونات SVG ============ */
+  const SVG = {
+    phone:'<svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg>',
+    wa:'<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.3A10 10 0 1 0 12 2z"/><path fill="#25d366" d="M16.5 14.4c-.2.6-1.2 1.1-1.7 1.1-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.2-3.7-4.3-3.9-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.6 1 1.4 1.8 2.4 2.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.2z"/></svg>',
+    pin:'<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>',
+    fb:'<svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.7 2.2 15.7 2 14.6 2 12.2 2 10.5 3.5 10.5 6.2v2.3H8v3.5h2.5V22H14V12h2.7l.4-3.5H14z"/></svg>',
+    ig:'<svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>',
+    tt:'<svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.3a6 6 0 0 0-.8-.1 6 6 0 1 0 6 6V8.6a7.5 7.5 0 0 0 4.3 1.4V6.8A4.3 4.3 0 0 1 16.6 2z"/></svg>',
+    share:'<svg viewBox="0 0 24 24"><path d="M18 16.1c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 1 0-3-3c0 .24.04.47.09.7L8.04 9.81A2.99 2.99 0 0 0 6 9a3 3 0 1 0 0 6c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65A2.92 2.92 0 1 0 18 16.1z"/></svg>',
+    go:'<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const ext = 'target="_blank" rel="noopener noreferrer"';
+  const p1 = DATA.phones[0];
+  let lang = "ar", theme = "light", picked = "";
+  const DEV = { phone: "01229808367", intl: "201229808367", logo: "anas-logo.png" };
+  const NAV = [["s-contact","contact"],["s-follow","follow"],["s-pay","pay"],["s-services","services"],["s-order","order"],["s-faq","faq"],["s-hours","hours"]];
+
+  /* حفظ الإعدادات (لو المتصفح مانع التخزين مفيش مشكلة) */
+  const store = {
+    get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  function toast(msg) {
+    const t = $("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast.id);
+    toast.id = setTimeout(() => t.classList.remove("show"), 1800);
+  }
+
+  function copyText(text, okMsg) {
+    const done = () => toast(okMsg);
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      const ta = document.createElement("textarea");
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      ta.remove(); done();
+    }
+  }
+
+  function item(o) {
+    const icon = o.img
+      ? '<span class="ico plain"><img src="' + o.img + '" alt="" loading="lazy"></span>'
+      : '<span class="ico ' + (o.cls || "") + '">' + o.svg + '</span>';
+    return '<a class="link" style="--c:' + (o.color || "#1f5fbf") + '" href="' + o.href + '" ' + (o.href.indexOf("tel:") === 0 ? "" : ext) + '>' + icon +
+           '<span class="tx"><b>' + o.title + '</b><small>' + (o.sub || "") + '</small></span><span class="go">' + SVG.go + '</span></a>';
+  }
+
+  /* رسم كل المحتوى حسب اللغة */
+  function render() {
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.documentElement.dataset.theme = theme;
+    document.title = "AlEman Car's Accessories | Blue";
+
+    document.querySelectorAll("[data-t]").forEach((el) => { el.textContent = t[el.dataset.t]; });
+    $("name").textContent = t.name;
+    $("tagline").textContent = t.tagline;
+    $("avatar").alt = t.name;
+    $("langBtn").textContent = t.lang;
+    $("themeBtn").textContent = theme === "light" ? t.dark : t.light;
+    $("address").textContent = t.address;
+    $("foot").textContent = "© " + t.name;
+
+    $("cover").style.backgroundImage = 'url("' + DATA.cover + '")';
+    $("avatar").src = DATA.avatar;
+    $("spImg").src = DATA.avatar;
+    $("aCall").href = "tel:+" + p1.intl;
+    $("aWa").href = $("fab").href = "https://wa.me/" + p1.intl;
+    $("aMap").href = DATA.map;
+    $("fab").innerHTML = SVG.wa;
+    document.querySelectorAll("[data-ic]").forEach((el) => { el.innerHTML = SVG[el.dataset.ic]; });
+
+    /* التواصل */
+    const labels = [t.first, t.second];
+    let html = "";
+    DATA.phones.forEach((p, i) => {
+      html += '<div class="row">' + item({ href: "tel:+" + p.intl, title: labels[i], sub: p.number, color: "#1f5fbf", cls: "ph", svg: SVG.phone }) +
+              '<button class="copy" type="button" data-copy="' + p.number + '">' + t.copy + '</button></div>';
+    });
+    html += item({ href: "https://wa.me/" + p1.intl, title: t.whatsapp, sub: p1.number, color: "#25d366", cls: "wa", svg: SVG.wa });
+    html += item({ href: DATA.map, title: t.mapTitle, sub: t.mapSub, color: "#d6453d", cls: "pin", svg: SVG.pin });
+    $("contactLinks").innerHTML = html;
+
+    $("socialLinks").innerHTML =
+      item({ href: DATA.facebook,  title: "Facebook",  sub: "aleman.car.accessories", color: "#1877f2", cls: "fb", svg: SVG.fb }) +
+      item({ href: DATA.instagram, title: "Instagram", sub: "alemancaraccessories",   color: "#d62976", cls: "ig", svg: SVG.ig }) +
+      item({ href: DATA.tiktok,    title: "TikTok",    sub: "@aleman.car.access",     color: "#fe2c55", cls: "tt", svg: SVG.tt });
+
+    $("payLinks").innerHTML =
+      item({ href: DATA.vodafone.url, title: "Vodafone Cash", sub: t.payHint, img: DATA.vodafone.icon }) +
+      item({ href: DATA.instapay.url, title: "InstaPay",      sub: t.payHint, img: DATA.instapay.icon });
+
+    /* الخدمات + قائمة النموذج */
+    const list = DATA.services[lang];
+    $("chips").innerHTML = list.map((s, i) => '<button type="button" class="chip' + (picked === i ? " on" : "") + '" data-i="' + i + '">' + s + '</button>').join("");
+    $("fItem").innerHTML = list.map((s, i) => '<option value="' + i + '"' + (picked === i ? " selected" : "") + '>' + s + '</option>').join("");
+
+    renderHours();
+    renderExtras(t);
+  }
+
+  /* شريط التنقل + الأسئلة + إعلان المطوّر */
+  function renderExtras(t) {
+    $("nav").innerHTML = NAV.map((s) => '<a href="#' + s[0] + '" data-s="' + s[0] + '">' + t[s[1]] + "</a>").join("");
+    const h = DATA.hours[0], hrs = fmtH(h[0]) + " - " + fmtH(h[1]);
+    $("faq").innerHTML = t.faqs.map((f) => "<details><summary>" + f[0] + "</summary><p>" + f[1].replace("{h}", hrs).replace("{a}", t.address) + "</p></details>").join("");
+    $("ad").innerHTML = '<img src="' + DEV.logo + '" alt="Anas" onerror="this.remove()">' +
+      '<div class="tx"><h3>' + t.adTitle + "</h3><p>" + t.adText + " · " + DEV.phone + "</p></div>" +
+      '<div class="btns"><a href="tel:+' + DEV.intl + '">' + t.call + "</a>" +
+      '<a class="wa" href="https://wa.me/' + DEV.intl + "?text=" + encodeURIComponent(t.adMsg) + '" ' + ext + ">" + t.whatsapp + "</a></div>";
+    spy();
+  }
+
+  /* تمييز القسم الحالي في الشريط + زر الرجوع لفوق */
+  function spy() {
+    let cur = "";
+    NAV.forEach((s) => { const el = $(s[0]); if (el && el.getBoundingClientRect().top < 120) cur = s[0]; });
+    document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("on", a.dataset.s === cur));
+    $("top").classList.toggle("show", window.scrollY > 400);
+    const on = document.querySelector("#nav a.on");
+    if (on && spy.last !== cur) { spy.last = cur; on.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" }); }
+  }
+
+  /* المواعيد + مفتوح/مغلق بتوقيت القاهرة */
+  function fmtH(h) {
+    const t = T[lang], suf = h >= 12 && h < 24 ? t.pm : t.am, hh = h % 12 === 0 ? 12 : h % 12;
+    return hh + ":00 " + suf;
+  }
+  function renderHours() {
+    const t = T[lang];
+    const cairo = new Date(new Date().toLocaleString("en-US", { timeZone: "Africa/Cairo" }));
+    const today = cairo.getDay(), now = cairo.getHours() + cairo.getMinutes() / 60;
+    $("hours").innerHTML = DATA.hours.map((h, i) =>
+      '<div' + (i === today ? ' class="today"' : "") + '><span>' + t.days[i] + '</span><span>' + fmtH(h[0]) + " - " + fmtH(h[1]) + "</span></div>").join("");
+    const isOpen = now >= DATA.hours[today][0] && now < DATA.hours[today][1];
+    $("status").textContent = isOpen ? t.open : t.closed;
+    $("status").classList.toggle("closed", !isOpen);
+  }
+
+  /* ============ الأحداث ============ */
+  $("langBtn").onclick = () => { lang = lang === "ar" ? "en" : "ar"; store.set("lang", lang); render(); };
+  $("themeBtn").onclick = () => { theme = theme === "light" ? "dark" : "light"; store.set("theme", theme); render(); };
+
+  document.addEventListener("click", (e) => {
+    const c = e.target.closest("[data-copy]");
+    if (c) copyText(c.dataset.copy, T[lang].copied);
+    const ch = e.target.closest(".chip");
+    if (ch) { picked = picked === +ch.dataset.i ? "" : +ch.dataset.i; render(); }
+  });
+  $("fItem").onchange = (e) => { picked = +e.target.value; render(); };
+
+  /* مشاركة */
+  $("aShare").onclick = () => {
+    const url = location.href.split("#")[0];
+    if (navigator.share) navigator.share({ title: T[lang].name, url: url }).catch(() => {});
+    else copyText(url, T[lang].linkCopied);
+  };
+
+  /* حفظ جهة الاتصال (vCard) */
+  $("saveContact").onclick = () => {
+    const v = ["BEGIN:VCARD", "VERSION:3.0", "FN:" + T.ar.name, "ORG:" + T.en.name,
+      "TEL;TYPE=CELL:+" + DATA.phones[0].intl, "TEL;TYPE=CELL:+" + DATA.phones[1].intl,
+      "ADR;TYPE=WORK:;;" + T.ar.address + ";;;;Egypt", "URL:" + DATA.facebook, "END:VCARD"].join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([v], { type: "text/vcard" }));
+    a.download = "AlEman-Car-Accessories.vcf";
+    document.body.appendChild(a); a.click(); a.remove();
+    toast(T[lang].saved);
+  };
+
+  /* إرسال الطلب على واتساب */
+  $("sendOrder").onclick = () => {
+    const t = T[lang], name = $("fName").value.trim(), msg = $("fMsg").value.trim();
+    const sel = DATA.services[lang][$("fItem").value];
+    const text = t.msgHello + " " + (name || "-") + "\n" + t.msgItem + ": " + sel + (msg ? "\n" + t.msgDetails + ": " + msg : "");
+    window.open("https://wa.me/" + p1.intl + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+  };
+
+  window.addEventListener("scroll", spy, { passive: true });
+  $("top").onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  $("avatar").onerror = function () { this.style.visibility = "hidden"; };
+
+  /* تشغيل */
+  lang = store.get("lang", "ar");
+  theme = store.get("theme", "light");
+  render();
+  setInterval(renderHours, 60000);
+  setTimeout(() => $("splash").classList.add("hide"), 1700);
+</script>
+</body>
+</html>
